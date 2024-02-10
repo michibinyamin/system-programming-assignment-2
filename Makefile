@@ -6,12 +6,12 @@ AFLAGS = rcs
 
 .PHONY: all clean
 
-all: MyGraph MyKnapSack
+all: my_graph my_Knapsack
 
-MyGraph: my_graph.o libmymat.a
+my_graph: my_graph.o libmymat.a
 	$(CC) $(CFLAGS) $^ -o $@
 
-MyKnapSack: my_Knapsack.o 
+my_Knapsack: my_Knapsack.o 
 	$(CC) $(CFLAGS) $< -o $@
 
 libmymat.a: my_mat.o
@@ -27,4 +27,4 @@ my_Knapsack.o: my_Knapsack.c
 	$(CC) $(CFLAGS) -c $<
 
 clean:
-	rm -f *.o *.a MyGraph MyKnapSack
+	rm -f *.o *.a my_graph my_Knapsack
