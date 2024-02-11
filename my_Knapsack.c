@@ -107,10 +107,10 @@ int main(){
     int selected_bool[max_size];
 
     for (int i = 0; i < max_size; i++) {
-        //printf("Type value of item %c : ", 'A' + i);
 
         scanf(" %c", &items[i]); // Insert item to list
 
+        //printf("Type value of item %c : ", 'A' + i);
         scanf(" %d", &values[i]); // Insert value to list
 
         //printf("Type weight of item %c : ", 'A' + i);
