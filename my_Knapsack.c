@@ -107,11 +107,12 @@ int main(){
     char result[max_size]; 
 
     for (int i = 0; i < max_size; i++) {
-        printf("Type value of item %c : ", 'A' + i);
-        scanf("%d", &values[i]); // Insert value to list
+        printf("%c ", 'a' + i);
+        //printf("Type value of item %c : ", 'A' + i);
+        scanf(" %d", &values[i]); // Insert value to list
 
-        printf("Type weight of item %c : ", 'A' + i);
-        scanf("%d", &weights[i]); // Insert weight to list
+        //printf("Type weight of item %c : ", 'A' + i);
+        scanf(" %d", &weights[i]); // Insert weight to list
     }
 
     int *new_selected_bool = make_matrix(weights, values, selected_bool);  // Stores the selected bool which determins which items to take
