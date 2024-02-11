@@ -28,9 +28,9 @@ int main() {
             case 'B':
             {
                 //printf("type first node : ");
-                scanf("%d", &i);
+                scanf(" %d", &i);
                 //printf("type second node : ");
-                scanf("%d",&j);
+                scanf(" %d",&j);
                 is_path(matrix, i, j);    //will be printed in the function
                 break;
             }
@@ -38,9 +38,9 @@ int main() {
             case 'C':
             {
                 //printf("type first node : ");
-                scanf("%d", &i);
+                scanf(" %d", &i);
                 //printf("type second node : ");
-                scanf("%d",&j);
+                scanf(" %d",&j);
                 shortest_path(matrix, i, j);    //will be printed in the function
                 break;
             }

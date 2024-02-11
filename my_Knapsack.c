@@ -101,14 +101,16 @@ int KnapSack(int weights[], int values[], int selected_bool[]){
 }
 
 int main(){
+    char items[max_size];
     int values[max_size];
     int weights[max_size];
     int selected_bool[max_size];
-    char result[max_size]; 
 
     for (int i = 0; i < max_size; i++) {
-        printf("%c ", 'a' + i);
         //printf("Type value of item %c : ", 'A' + i);
+
+        scanf(" %c", &items[i]); // Insert item to list
+
         scanf(" %d", &values[i]); // Insert value to list
 
         //printf("Type weight of item %c : ", 'A' + i);
@@ -118,30 +120,16 @@ int main(){
     int *new_selected_bool = make_matrix(weights, values, selected_bool);  // Stores the selected bool which determins which items to take
     int max_profit = KnapSack(weights, values, new_selected_bool);  // Stores the maximum profit with the given items(checks with the new selected bool)
 
-    // Add the items to the result list
-    int x = 0;
-    for (int i = 0; i < max_size; i++)
-    {
-        if (new_selected_bool[i])   // When true add the item
-        {
-            result[x] = 'a' + i;     // i + 65 = {A,B,C,D,....}
-            x++;
-        } 
-    }
-
     // Print
     printf("Maximum profit: %d\n", max_profit);
     printf("Selected items:");
-    for (int j = 0; j < x; j++)
-    {
-        printf(" %c", result[j]);
-    }
-    
 
-    //printf("Items that give the maximum profit: [");
-    //for (int j = 0; j < x; j++) {
-    //   printf("%c%s", result[j], (j < x - 1) ? ", " : "");
-    //}
-    //printf("]\n");
+    for (int i = 0; i < max_size; i++)
+    {
+        if (new_selected_bool[i])   // When true print item
+        {
+            printf(" %c", items[i]);
+        } 
+    }
     return 0;
 }
