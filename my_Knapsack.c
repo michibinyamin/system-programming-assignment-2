@@ -123,18 +123,24 @@ int main(){
     {
         if (new_selected_bool[i])   // When true add the item
         {
-            result[x] = 'A' + i;     // i + 65 = {A,B,C,D,....}
+            result[x] = 'a' + i;     // i + 65 = {A,B,C,D,....}
             x++;
         } 
     }
 
     // Print
     printf("Maximum profit: %d\n", max_profit);
-    printf("Items that give the maximum profit: [");
-
-    for (int j = 0; j < x; j++) {
-        printf("%c%s", result[j], (j < x - 1) ? ", " : "");
+    printf("Selected items:");
+    for (int j = 0; j < x; j++)
+    {
+        printf(" %c", result[j]);
     }
-    printf("]\n");
+    
+
+    //printf("Items that give the maximum profit: [");
+    //for (int j = 0; j < x; j++) {
+    //   printf("%c%s", result[j], (j < x - 1) ? ", " : "");
+    //}
+    //printf("]\n");
     return 0;
 }
