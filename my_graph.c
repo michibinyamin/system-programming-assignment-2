@@ -12,11 +12,9 @@ int main() {
         matrix[i] = (int*) malloc(size * sizeof(int));
     }
 
-    //int matrix[size][size];
-
     do // Loop untill C is enterd by the user
     {
-        printf("type the function you want : ");
+        //printf("type the function you want : ");
         scanf(" %c", &choice);
 
         switch (choice)
@@ -29,9 +27,9 @@ int main() {
 
             case 'B':
             {
-                printf("type first node : ");
+                //printf("type first node : ");
                 scanf("%d", &i);
-                printf("type second node : ");
+                //printf("type second node : ");
                 scanf("%d",&j);
                 is_path(matrix, i, j);    //will be printed in the function
                 break;
@@ -39,9 +37,9 @@ int main() {
 
             case 'C':
             {
-                printf("type first node : ");
+                //printf("type first node : ");
                 scanf("%d", &i);
-                printf("type second node : ");
+                //printf("type second node : ");
                 scanf("%d",&j);
                 shortest_path(matrix, i, j);    //will be printed in the function
                 break;
@@ -51,7 +49,7 @@ int main() {
                 break;      //leave loop option
         }
     }
-    while(choice != 'D');
+    while(choice != 'D' && choice != EOF);
     
     for (int i = 0; i < size; ++i){
         free(matrix[i]);
