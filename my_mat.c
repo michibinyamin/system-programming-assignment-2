@@ -7,7 +7,7 @@ void initialize_Array(int** matrix) {
     // Copy the elements from the matrix to the array
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++) {
-            printf("value : ");
+            //printf("value : ");
             scanf(" %d", &matrix[i][j]);
         }
     }
@@ -72,15 +72,15 @@ void is_path(int** matrix, int i, int j){
 
     // Check if the indexes are in bounds
     if (i < 0 || i >= size || j < 0 || j >= size) {
-        printf("false\n"); // Out of bounds
+        printf("False\n"); // Out of bounds
     }
     // Check if the value at the given indices is bigger then 0 AND smaller then infinity(indicating a route)
     else if (path < INFINITY && path != 0) {
-        printf("true\n"); // Path exists
+        printf("True\n"); // Path exists
     }
     else
     {
-         printf("false\n"); // No path
+         printf("False\n"); // No path
     }
 }
 
